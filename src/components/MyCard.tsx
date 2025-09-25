@@ -1,6 +1,6 @@
-import { Card, CardProps } from "antd";
+import {Card, type CardProps} from "antd";
 
-export default function MyCard({ children, ...rest }: CardProps) {
+export default function MyCard({children, ...rest}: CardProps) {
     return (
         <Card
             {...rest}
