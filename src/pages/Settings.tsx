@@ -4,7 +4,7 @@ import MyButton from "../components/MyButton";
 import { Form, Input } from "antd";
 
 export default function Settings() {
-    const onFinish = (values: any) => {
+    const onFinish = (values: never) => {
         console.log("保存配置：", values);
     };
 

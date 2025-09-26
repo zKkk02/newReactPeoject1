@@ -5,6 +5,7 @@ import Users from "../pages/Users";
 import Products from "../pages/Products";
 import Orders from "../pages/Orders";
 import Settings from "../pages/Settings";
+import "antd/dist/reset.css"; // AntD 版本 >=5
 
 export default function Router() {
     const isLoggedIn = true; // 暂时模拟登录状态

@@ -2,7 +2,8 @@ import MainLayout from "../layouts/MainLayout";
 import MyCard from "../components/MyCard";
 import MyButton from "../components/MyButton";
 import MyTable from "../components/MyTable";
-
+import { useLoading } from "../context/LoadingContext";
+import { useEffect } from "react";
 const data = [
     { id: "1", name: "张三", role: "管理员" },
     { id: "2", name: "李四", role: "操作员" },
@@ -20,6 +21,18 @@ const columns = [
 ];
 
 export default function Users() {
+
+    const { showLoading, hideLoading } = useLoading();
+
+    useEffect(() => {
+        showLoading("正在加载人员数据...");
+        const timer = setTimeout(() => {
+            hideLoading();
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <MainLayout>
             <MyCard title="用户管理">
