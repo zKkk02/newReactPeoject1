@@ -15,8 +15,7 @@ const columns = [
     {
         title: "操作",
         key: "action",
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        render: (_: any, record: any) => (
+        render: () => (
             <>
                 <MyButton type="link">编辑</MyButton>
                 <MyButton type="link" danger>删除</MyButton>
