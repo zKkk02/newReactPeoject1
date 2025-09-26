@@ -13,7 +13,7 @@ export default function Dashboard() {
         showLoading("正在加载仪表盘数据...");
         const timer = setTimeout(() => {
             hideLoading();
-        }, 1000);
+        }, 300);
 
         return () => clearTimeout(timer);
     }, []);
